@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Simple PHP Semaphore",
     "license": "MIT",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Dimarti\\Semaphore\\": "src/"
