@@ -1,0 +1,16 @@
+{
+    "name": "dimarti/semaphore",
+    "description": "Simple PHP Semaphore",
+    "autoload": {
+        "psr-4": {
+            "Dimarti\\Semaphore\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Diego Martínez",
+            "email": "diego.martinez.marin@gmail.com"
+        }
+    ],
+    "require": {}
+}
