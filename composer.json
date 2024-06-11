@@ -1,6 +1,7 @@
 {
     "name": "dimarti/semaphore",
     "description": "Simple PHP Semaphore",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Dimarti\\Semaphore\\": "src/"
