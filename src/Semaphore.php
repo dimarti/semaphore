@@ -18,7 +18,9 @@ class Semaphore
 
     public function unlock(): void
     {
-        unlink($this->lockfile);
+        if ($this->isLocked()) {
+            unlink($this->lockfile);
+        }
     }
 
     public function lock(): void

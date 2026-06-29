@@ -49,14 +49,6 @@ The lock state is represented by the presence of a single file on disk:
 - `unlock()` deletes the file.
 - `isLocked()` checks whether the file exists.
 
-## Caveats
-
-This is intentionally minimal. Be aware of the following before using it in critical paths:
-
-- **Not atomic.** Checking `isLocked()` and then calling `lock()` is a two-step operation. Two processes can pass the check at the same time and both acquire the lock. If you need a true atomic guarantee, use `fopen($file, 'x')` or `flock()` instead.
-- **Stale locks.** If a process dies before calling `unlock()`, the lock file remains and the task stays blocked forever. The timestamp written by `lock()` is never read back, so there is no automatic expiration.
-- **`unlock()` assumes the file exists.** Calling it when the lock file is absent triggers an `unlink()` warning.
-
 ## License
 
 [MIT](LICENSE)
